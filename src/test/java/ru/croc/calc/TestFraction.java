@@ -1,8 +1,7 @@
-package ru.croc.calc.test;
+package ru.croc.calc;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.croc.calc.java.Fraction;
 
 public class TestFraction {
 
