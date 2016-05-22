@@ -1,10 +1,22 @@
-package ru.croc.calc.java;
+package ru.croc.calc;
 
+/**
+ * класс для дробей
+ * имеет поля:
+ * numerator - для числителя
+ * denominator - для знаменателя
+ * выполняет арифметические действия
+ */
 public class Fraction {
 
     private int numerator;
     private int denominator;
 
+    /**
+     * Конструктор
+     * @param fraction - строка вида x/y
+     * проверка на правильность входящего параметра происходит вне конструктора в другом классе
+     */
     public Fraction(String fraction) {
         String[] numbs = fraction.split("/");
         numerator = Integer.parseInt(numbs[0]);
@@ -29,7 +41,12 @@ public class Fraction {
         return numerator + "/" + denominator;
     }
 
-    //нахождение НОК для ДВУХ чисел с сипользованием связи НОК и НОД
+    /**
+     * нахождение НОК для ДВУХ чисел
+     * @param number1 первое число
+     * @param number2 второе число
+     * @return НОК двух чисел с сипользованием связи НОК и НОД
+     */
     public static int findLCM(int number1, int number2) {
         //НОД:
         int[] mcd = {number1, number2};
@@ -70,9 +87,21 @@ public class Fraction {
         denominator *= fraction.numerator;
     }
 
-    //выполняет арифметическое действие в зависимости от строкового параметра
-    public void performArythmeticAction(Fraction fraction, String arythmAction) {
-        switch (arythmAction) {
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    /**
+     * выполняет арифметическое действие в зависимости от строкового параметра
+     * @param fraction - операнд
+     * @param arithmAction - арифметическое действие
+     */
+    public void performArithmeticAction(Fraction fraction, String arithmAction) {
+        switch (arithmAction) {
             case "\\+":
                 this.add(fraction);
                 break;
