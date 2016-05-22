@@ -71,9 +71,12 @@ public class Calculator {
                     expression = parseStr(expression);
                     if (expression == null) {
                         resultFractions.add(null);
+                        System.out.println("Неверное выражение.");
                         continue;
                     }
-                    resultFractions.add(calculate(expression));
+                    Fraction fractRes = calculate(expression);
+                    resultFractions.add(fractRes);
+                    System.out.println("= " + fractRes);
                 }
                 parser.saveObject(file, resultFractions);
             } catch (IOException e) {
