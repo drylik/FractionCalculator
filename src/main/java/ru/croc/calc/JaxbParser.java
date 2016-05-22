@@ -1,4 +1,4 @@
-package ru.croc.calc.java;
+package ru.croc.calc;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -6,6 +6,9 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
+/**
+ * Парсер xml-файлов
+ */
 public class JaxbParser implements Parser {
     @Override
     public Object getObject(File file, Class c) throws JAXBException {
