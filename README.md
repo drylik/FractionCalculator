@@ -26,4 +26,4 @@
     cd FractionCalculator
     mvn install
     cd target
-    java -jar FractionCalc-0.2.jar
+    java -jar FractionCalc-0.2.jar ["Путь к файлу"]
