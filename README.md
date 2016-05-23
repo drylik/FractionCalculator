@@ -18,6 +18,16 @@
 
 Допустимо любое количество пробелов при вводе выражений.
 
+Пример допустимого выражения: 5/ 5 + 8 /4
+
+###Установка:
+ 
+    git clone https://github.com/drylik
+    cd FractionCalculator
+    mvn install
+    cd target
+    java -jar FractionCalc-0.2.jar
+
 Замечания по версии 0.1:
 
 1. исключить файлы IDEA из репозитория (ignore), добавить скрипт сборки pom.xml
