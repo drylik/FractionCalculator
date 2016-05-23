@@ -1,4 +1,4 @@
-package ru.croc.calc;
+package ru.croc.parse;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
